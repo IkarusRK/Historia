@@ -1,0 +1,219 @@
+:root {
+    --bg: #f6f7fb;
+    --card: #ffffff;
+    --text-color: #0b1220;
+    /* Cor do texto no modo claro */
+    --muted: #6b7280;
+    --accent-a: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    --glass: rgba(255, 255, 255, 0.6);
+    --radius: 14px;
+}
+
+[data-theme="dark"] {
+    --bg: #0b1020;
+    --card: #0f1724;
+    --text-color: #e2e8f0;
+    /* Cor do texto no modo escuro (CORRIGIDO AQUI) */
+    --muted: #9aa4b2;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--text-color);
+    /* Usando a variável aqui */
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    transition: background 0.3s ease, color 0.3s ease;
+    /* Transição suave */
+}
+
+.wrap {
+    max-width: 1000px;
+    width: 100%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    background: var(--accent-a);
+    display: inline-grid;
+    place-items: center;
+    box-shadow: 0 6px 18px rgba(37, 117, 252, 0.12);
+    background-image: url('IMG/HuskyIcon.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    margin: 0;
+    font-size: 20px
+}
+
+p.lead {
+    margin: 0;
+    color: var(--muted)
+}
+
+.controls {
+    display: flex;
+    gap: 8px;
+    align-items: center
+}
+
+.btn {
+    background: transparent;
+    border: 0;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--text-color);
+    /* Botões agora seguem a cor do texto */
+    box-shadow: inset 0 0 0 1px rgba(11, 18, 32, 0.06);
+}
+
+[data-theme="dark"] .btn {
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+}
+
+.btn.primary {
+    background: var(--accent-a);
+    color: white;
+    box-shadow: 0 8px 24px rgba(101, 86, 255, 0.12)
+}
+
+.hero {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 26px;
+    box-shadow: 0 12px 40px rgba(2, 6, 23, 0.06);
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 20px;
+    align-items: start;
+}
+
+.story {
+    line-height: 1.6;
+    color: inherit;
+    font-size: 16px
+}
+
+.meta-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+    padding: 18px;
+    border-radius: 12px;
+    align-self: start;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02)
+}
+
+[data-theme="light"] .meta-card {
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.meta-card h3 {
+    margin: 0 0 8px 0
+}
+
+.meta-card small {
+    color: var(--muted)
+}
+
+.section {
+    margin-top: 18px
+}
+
+.center {
+    display: flex;
+    gap: 12px;
+    align-items: center
+}
+
+footer {
+    margin-top: 18px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px
+}
+
+@media (max-width:880px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .meta-card {
+        order: 2
+    }
+}
+
+.progress-wrap {
+    position: sticky;
+    top: 20px
+}
+
+progress {
+    width: 100%;
+    height: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: none;
+}
+
+/* Fix para firefox/chrome em dark mode */
+progress::-webkit-progress-bar {
+    background: rgba(128, 128, 128, 0.2);
+}
+
+progress::-webkit-progress-value {
+    background: linear-gradient(90deg, #6a11cb, #2575fc)
+}
+
+code {
+    background: rgba(11, 18, 32, 0.05);
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: var(--text-color);
+}
+
+[data-theme="dark"] code {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+blockquote {
+    border-left: 4px solid #6a11cb;
+    margin: 1em 0;
+    padding-left: 1em;
+    color: var(--muted);
+    font-style: italic;
+}
