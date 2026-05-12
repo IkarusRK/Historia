@@ -2,191 +2,258 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Vörðr — A História</title>
-  <meta name="description" content="A história de Vörðr — guardião da Rua 2. Uma narrativa sobre origem, mutação e escolha.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="IMG/HuskyIcon.png" type="image/png">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Blacknoir — O Justiceiro</title>
+    <meta name="description" content="A história de Noah Fontenelle — o homem que o fogo criou e a perda transformou.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@300;400;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body data-theme="dark">
-  <div class="wrap">
 
-    <header>
-      <div class="brand">
-        <div class="logo">VÖ</div>
-        <div>
-          <h1>Vörðr — A História</h1>
-          <p class="lead">A jornada de um espécime único</p>
-        </div>
-      </div>
-      <div class="controls">
-        <button class="btn" id="listenBtn" title="Ouvir história">▶ Ouvir</button>
-        <button class="btn primary" id="themeToggle">Modo Claro</button>
+    <!-- Cursor -->
+    <div id="cur-dot"></div>
+    <div id="cur-ring"></div>
+
+    <!-- Reading bar -->
+    <div id="readbar"></div>
+
+    <!-- Particles canvas -->
+    <canvas id="particles"></canvas>
+
+    <!-- Tooltip -->
+    <div id="tooltip"></div>
+
+    <!-- Audio bar -->
+    <div id="audiobar">
+        <span class="aud-dot"></span>
+        <span class="track">Blacknoir — A História</span>
+        <button class="btn" id="stopBtn">◼ Parar</button>
     </div>
+
+    <!-- Header -->
+    <header>
+        <div class="brand">
+            <div class="logo-skull">☠</div>
+            <div class="brand-text">
+                <h1>Blacknoir — O Justiceiro</h1>
+                <p>A história de Noah Fontenelle</p>
+            </div>
+        </div>
+        <div class="controls">
+            <button class="btn" id="listenBtn">▶ Ouvir</button>
+            <button class="btn" id="themeBtn">Modo Claro</button>
+        </div>
     </header>
 
     <!-- Hero Banner -->
-    <section class="story-hero">
-      <p class="hero-eyebrow">Amostra N-7 &nbsp;·&nbsp; Célula 7 &nbsp;·&nbsp; Rua 2</p>
-      <h2 class="hero-title">VÖRÐR</h2>
-      <p class="hero-subtitle">O Guardião — nórdico antigo</p>
-      <div class="rune-divider">ᚹ &nbsp; ᛟ &nbsp; ᚱ &nbsp; ᛞ &nbsp; ᚱ</div>
+    <section class="hero-banner">
+        <p class="hero-tag">Noah Fontenelle &nbsp;·&nbsp; Noah Fontenelle &nbsp;·&nbsp; Rua 2</p>
+        <h2 class="hero-title">
+            Noah<br>
+            <span>BLACKNOIR</span>
+        </h2>
+        <p class="hero-sub">"O esforço de pessoas de bem não será destruído enquanto eu respirar."</p>
+        <div class="divider">I &nbsp; A Queda &nbsp; II &nbsp; O Fogo &nbsp; III &nbsp; O Executor</div>
     </section>
 
-    <main class="hero" role="main">
-      <article class="story" id="story">
+    <!-- Main -->
+    <div class="main-grid">
+        <article class="story" id="story">
 
-        <p><strong>A primeira coisa que ele sentiu foi frio.</strong></p>
+            <div class="chapter">I — A Mesa</div>
 
-        <p>Não o frio de um lugar gelado, era um frio de dentro, como se algo tivesse sido despejado direto nas veias antes mesmo de ele saber que tinha veias. Depois veio a luz. Branca, dura, sem piedade. E sons que não faziam sentido ainda: bipes, passos, vozes falando sobre ele como se ele não estivesse lá.</p>
+            <p>Noah sempre soube o cheiro de esforço honesto.</p>
 
-        <p>Ele estava.</p>
+            <p>Era o café da mãe às seis da manhã. Era o calo na mão do pai depois de um turno duplo. Era a mesa
+                pequena, a comida simples, e a conversa grande — sobre futuro, sobre dignidade, sobre a ideia de que
+                quem planta direito, colhe direito. Ele acreditava nisso como se fosse lei física. Como se o universo
+                tivesse obrigação de honrar o combinado.</p>
 
-        <hr>
+            <p>Estava na cozinha naquela noite, os livros do vestibular abertos, a torradeira antiga zumbindo no canto.
+                Uma briga explodiu no corredor — o pai com a voz pesada de contas atrasadas, ele com a impaciência de
+                quem quer mais do que o presente oferece. Palavras que não deveriam ser ditas foram ditas. E Noah fez
+                o que jovens fazem quando não sabem lidar com o peso: saiu. Pegou a bike e pedалou para longe, para o ar
+                frio, para o silêncio que o barulho de casa não deixava ter.</p>
 
-        <p>O tanque de contenção era de acrílico reforçado. Dois metros de diâmetro, sensores em cada parede, câmeras no teto. Os técnicos chamavam o compartimento de <em>Célula 7</em>, e chamavam ele de <em>Amostra N-7</em> nas primeiras semanas. Ninguém tinha dado nome ainda. Nomes criavam apego, e apego criava problemas metodológicos, foi o que o cientista-chefe disse na primeira reunião de equipe, ajustando os óculos sobre o nariz fino.</p>
+            <p>Ele nunca voltaria para aquela casa. Não da forma que importava.</p>
 
-        <p>Ninguém discutiu.</p>
+            <hr>
 
-        <hr>
+            <div class="chapter">II — As Luzes Vermelhas</div>
 
-        <p>N-7 cresceu rápido demais. Em três semanas tinha o tamanho que um filhote normal levaria quatro meses para atingir. Os pesquisadores anotavam isso em pranchetas com expressões neutras, mas havia algo nos olhos deles quando ele se movia, uma hesitação pequena, quase imperceptível, que ele aprendeu a reconhecer antes mesmo de entender o que significava.</p>
+            <p>As ambulâncias chegaram antes dele.</p>
 
-        <p>Eles tinham medo.</p>
+            <p>Quando dobrou a esquina e viu as luzes girando, o estômago afundou antes que o cérebro entendesse o
+                porquê. Era a rua dele. Era a fumaça preta subindo do lugar onde deveria estar o telhado. Era o bombeiro
+                saindo com expressão de homem que já viu coisa demais pra sentir mais nada.</p>
 
-        <p>Ele ainda não sabia o que fazer com essa informação.</p>
+            <p>Noah empurrou o policial que tentou segurá-lo. Não por força — por desespero, que às vezes é a mesma
+                coisa. Viu os sacos. Contou. <strong>Um. Dois. Três. Quatro. Cinco.</strong> Seus pais. Seus irmãos. A
+                família inteira que ele tinha deixado pra trás numa briga idiota sobre liberdade e dinheiro.</p>
 
-        <hr>
+            <p>Disseram que foi o fogão. Uma falha elétrica. Noah ouviu isso e soube que era mentira — não dos
+                investigadores, mas de si mesmo. Sabia o que tinha deixado ligado. Sabia que saiu com raiva e sem
+                cuidado. A culpa não esperou explicação. Ela chegou toda de uma vez, como o fogo que ele não viu mas
+                imaginou tantas vezes depois, e se instalou no peito com a intenção de ficar para sempre.</p>
 
-        <p>A mutação não veio de uma vez. Veio em camadas, como sedimento.</p>
+            <p><em>Ele se quebrou ali, debaixo das estrelas que não tinham nada a dizer.</em></p>
 
-        <p><strong>Primeiro foram os ossos</strong>, mais densos que o normal, o que os exames de imagem mostravam como sombras brancas e espessas nas radiografias. Os técnicos precisaram trocar as agulhas das seringas duas vezes antes de encontrar calibre suficiente para perfurar. Ele não reagiu às injeções. Ficou parado, olhando a parede oposta, respirando devagar.</p>
+            <hr>
 
-        <p><em>"Tolerância à dor acima do esperado"</em>, alguém anotou.</p>
+            <div class="chapter">III — Clara</div>
 
-        <p>Não era tolerância. Era que a dor chegava, ele reconhecia ela, e simplesmente não achava que valia a pena reagir. Parecia um desperdício de energia.</p>
+            <p>Clara foi o único farol que sobrou.</p>
 
-        <p><strong>Depois vieram os olhos.</strong> Numa manhã de terça-feira sem nenhum evento especial, um técnico abriu a Célula 7 para o exame de rotina e parou na porta. N-7 estava sentado no centro do compartimento como sempre, mas os olhos que olharam de volta eram azuis. Não o azul comum de alguns cães jovens. Azul glacial, quase luminoso, com uma profundidade que não combinava com o tamanho ainda jovem do corpo.</p>
+            <p>A família dela o acolheu sem fazer perguntas que ele não teria condições de responder. Dois anos. Noah
+                reconstruiu peça por peça — a faculdade, a rotina, a ideia frágil de que o mundo ainda tinha espaço pra
+                ele. Clara sorria do jeito que fazia a culpa diminuir de volume, não desaparecer, mas dar espaço pra
+                respirar.</p>
 
-        <p>O técnico ficou parado por quatro segundos antes de lembrar que tinha um protocolo para seguir.</p>
+            <p>Então ela sumiu.</p>
 
-        <p>Os relatórios descreveram como <em>"pigmentação ocular atípica, possivelmente relacionada à sequência fóssil inserida no vetor viral."</em> O que os relatórios não descreveram foi a sensação de ser olhado por aqueles olhos, a impressão estranha de que a criatura do outro lado não estava apenas vendo você, mas avaliando alguma coisa que você mesmo não sabia que estava mostrando.</p>
+            <p>Um beco errado. Uma gangue que não tinha interesse em meritocracia, em esforço, em nada do que os pais de
+                Noah ensinaram. Quando ele soube, o rastro era difícil — mas ele era teimoso da forma que só a culpa
+                ensina a ser. Seguiu cheiros, seguiu rumores, seguiu o ódio calmo que começou a substituir o luto.</p>
 
-        <hr>
+            <p>Quando encontrou o lugar, o ar cheirava a cigarro e a algo metálico que ele ainda não sabia nomear. Viu
+                Clara. Os ferimentos não eram de acidente — eram de crueldade deliberada, o tipo de coisa que as pessoas
+                fazem quando nunca ninguém ensinou que existe preço a pagar.</p>
 
-        <p>Os testes de resposta sensorial começaram no segundo mês. O laboratório tinha um corredor longo, com estímulos controlados em cada painel lateral, luzes, sons, odores sintéticos, variações de temperatura. A ideia era mapear os limites sensoriais do espécime. Quanto ele conseguia detectar, a que distância, com que precisão.</p>
+            <p><strong>A fúria de Noah não foi um grito.</strong> Foi uma marreta. Ele lutou com as mãos, encontrou
+                uma faca no chão e usou. Matou três. Saiu ferido, sangrando, com Clara nos braços — um peso que era todo
+                o mundo que ele ainda tinha. Ela morreu no caminho pro hospital. A mão dele segurando a dela, até o
+                último momento em que havia algo pra segurar.</p>
 
-        <p>N-7 entrou no corredor pela primeira vez e parou.</p>
+            <hr>
 
-        <p>Ficou parado por quarenta e dois segundos, o que nenhum outro espécime havia feito, os outros avançavam por instinto, curiosidade ou fome. Ele ficou parado porque estava processando. Os pesquisadores viram isso depois, revisando as câmeras em câmera lenta: as narinas se movendo em padrões mínimos, as orelhas girando frações de grau, os olhos percorrendo o corredor não com ansiedade, mas com uma metodologia que não tinha nome científico ainda.</p>
+            <div class="chapter">IV — O que Fica</div>
 
-        <p>Quando finalmente andou, foi direto ao painel sete, que emitia um odor sintético de adrenalina humana, indetectável a qualquer cão comum naquela concentração, e ficou na frente dele por três segundos antes de continuar.</p>
+            <p>Existe um tipo de silêncio que vem depois de perder tudo duas vezes.</p>
 
-        <p>O cientista-chefe assistiu ao vídeo quatro vezes naquela noite.</p>
+            <p>Não é paz. É o oposto — é o barulho de dentro quando não tem mais nada do lado de fora pra cobrir.
+                Noah ficou nesse silêncio por tempo suficiente pra entender uma coisa: ele não tinha virado niilista.
+                Queria ter. Teria sido mais simples. Mas a voz do pai ainda estava lá, e a da mãe, e a ideia
+                inconveniente de que o mundo deveria ser melhor do que é.</p>
 
-        <hr>
+            <p>Ele não aceitou a injustiça. Decidiu combatê-la.</p>
 
-        <p>O problema com N-7 não era agressividade. Era a ausência dela onde deveria existir.</p>
+            <p>Começou a treinar. Não com a vaidade de quem quer ser forte — com a frieza de quem quer ser eficiente.
+                Facas, armas de fogo, táticas de aproximação, pontos cegos, como se mover sem ser ouvido, como parar uma
+                ameaça antes que ela vire tragédia. Ele estudava os criminosos da Rua 2 com a mesma obsessão que
+                estudava o vestibular. Aprendia os padrões, os territórios, os horários.</p>
 
-        <p>Nos testes de resposta a ameaça, estímulos sonoros altos, figuras de aproximação rápida, simulações de confronto, ele não atacava. Não fugia. Ficava parado, avaliando, e depois tomava a decisão mais eficiente disponível: desviar, contornar, ou simplesmente sentar e esperar o estímulo passar.</p>
+            <p>Durante o dia: segurança num complexo de depósitos. Um trabalho comum, invisível, que pagava o arsenal e
+                mantinha um fio de sanidade — a ideia de que ele ainda era uma pessoa além da missão. À noite: o
+                Justiceiro. Sem uniforme chamativo, sem símbolo bordado. Só o colete tático, o crânio canino no braço —
+                um lembrete do predador que o mundo o obrigou a ser, e do que ele jura proteger.</p>
 
-        <p>Isso frustrava os técnicos responsáveis pelo condicionamento defensivo. Eles aumentavam a intensidade. Ele aumentava a paciência.</p>
+            <p><em>A culpa pelo fogo nunca foi embora. Mas ele aprendeu a usá-la como combustível.</em></p>
 
-        <p>Numa sessão específica, usaram um manequim motorizado programado para simular ataque direto, velocidade alta, barulho, luzes estroboscópicas. Qualquer animal no estudo anterior havia atacado ou recuado. N-7 deu um passo para o lado. O manequim passou por ele e bateu na parede do fundo. Ele olhou para o manequim caído, depois para os pesquisadores atrás do vidro, e voltou a sentar no centro da sala.</p>
+            <hr>
 
-        <p>Alguém no grupo de observação riu nervosamente. Ninguém anotou isso no relatório.</p>
+            <div class="chapter">V — A Rua 2</div>
 
-        <hr>
+            <p>A cidade tem uma lógica própria que leva tempo pra entender.</p>
 
-        <p>A única vez que ele demonstrou algo próximo de agitação foi durante um teste que não estava no protocolo oficial.</p>
+            <p>A Rua 2 não é só lugar de crime humano. Há sequestros comuns e há entidades que não tem nome em nenhum
+                relatório policial. Há gangues e há coisas que as gangues também temem. Noah aprendeu isso da forma
+                mais direta possível — numa noite em que foi investigar um desaparecimento e encontrou algo que não
+                deveria existir num beco atrás de uma padaria.</p>
 
-        <p>Um dos técnicos mais jovens, vinte e poucos anos, terceiro mês no laboratório, entrou na Célula 7 no final de um turno longo para coleta de amostras de rotina. Estava distraído, cansado, mexendo no tablet enquanto andava. Não seguiu o procedimento de entrada. Não esperou N-7 recuar para o canto demarcado. Apenas entrou e se abaixou para pegar o equipamento no chão.</p>
+            <p>Sobreviveu. Não sem custo.</p>
 
-        <p>N-7 estava a menos de um metro dele antes que qualquer câmera registrasse o movimento.</p>
+            <p>A polícia tolera o Justiceiro da forma que tolera chuva — reconhece que existe, não gosta do transtorno,
+                mas sabe que algumas coisas não são controláveis. O acordo não escrito é simples: <strong>se o trabalho
+                    não aparece no relatório, não é problema de ninguém.</strong> Quando aparece, vira. Há um tenente
+                que já mandou recado: a próxima vez que uma operação for comprometida, o Justiceiro deixa de ser uma
+                complicação e vira um alvo.</p>
 
-        <p>Não avançou. Não rosnou. Ficou parado a um metro, e quando o técnico levantou os olhos e os encontrou, aqueles olhos azuis, naquela distância, sem grade entre eles, ele congelou.</p>
+            <p>Noah ouviu o recado. Não mudou a rota.</p>
 
-        <p>Cinco segundos. Dez.</p>
+            <p>Os moradores da Rua 2 não fazem estátua de ninguém. Sobrevivência não deixa tempo pra herói. Mas há uma
+                linguagem paralela — a janela que abre quando ele passa, o aviso que chega por terceiros, o silêncio
+                específico de quem sabe algo e prefere não dizer em voz alta mas também não vai esconder. Não é gratidão
+                efusiva. É o reconhecimento pragmático de que o Justiceiro está lá onde a patrulha não chega.</p>
 
-        <p>Então N-7 recuou dois passos e deitou no chão, o queixo sobre as patas, olhando para outro lado.</p>
+            <hr>
 
-        <p>O técnico saiu da cela sem terminar a coleta. Pediu transferência de departamento na semana seguinte. Nos formulários, colocou <em>"motivos pessoais."</em></p>
+            <div class="chapter">VI — Vörðr</div>
 
-        <hr>
+            <p>O lobo apareceu numa noite que Noah não estava procurando companhia.</p>
 
-        <p>O laboratório explodiu numa quinta-feira. Não havia sido planejado para aquela data, nada naquela noite foi planejado direito. Uma facção rival havia localizado as instalações. O ataque foi rápido, barulhento, e os sistemas de contenção falharam na ordem errada: primeiro a energia, depois as travas, depois as câmeras.</p>
+            <p>Estava voltando de uma rua que ninguém frequentava depois da meia-noite, andando com o passo de quem tem
+                direção mas não tem pressa. Dobrou uma esquina e parou. No meio da rua havia uma criatura grande demais
+                para ser cachorro comum, com olhos que pegavam a luz de um jeito que luz não pega em animal normal.</p>
 
-        <p>Célula 7 abriu sozinha às 23:47.</p>
+            <p>Noah não correu. Não sacou nada. Ficou parado, olhando.</p>
 
-        <p>N-7 saiu pelo corredor principal, passou pelos laboratórios em chamas, pelos corpos no chão que ele parou para farejar por alguns segundos cada, e encontrou a saída nos fundos do complexo. Arame farpado. Dois metros e meio de altura.</p>
+            <p>A criatura também ficou. Avaliando alguma coisa que ele não sabia que estava mostrando.</p>
 
-        <p>Ele pulou.</p>
+            <p>Então Noah continuou andando. E o lobo foi junto. Sem cerimônia, sem explicação — apenas a decisão
+                silenciosa de dois seres que reconheceram um no outro algo que não precisava de nome ainda.</p>
 
-        <p>Do outro lado havia uma cidade que ele não conhecia, cheiros que nunca tinha sentido, e um silêncio que não era silêncio de verdade, era a cidade respirando, movendo, existindo em frequências que os humanos não ouviam mas ele sim. Ficou parado na beira da estrada por um longo momento.</p>
+            <p><strong>Desde essa noite, a Rua 2 parou de ser só dele.</strong></p>
 
-        <p>Depois virou para a direita e começou a andar.</p>
+            <p>Vörðr não obedece. Concorda. E quando os olhos azuis do lobo fixam em algum ponto que Noah não
+                consegue ver — alguma coisa no ar, algum cheiro que não pertence ao mundo normal — ele aprendeu a parar.
+                A esperar. A confiar num instinto que não é o dele, mas que nunca errou.</p>
 
-        <hr>
+            <p>A culpa pelo fogo ainda está lá. Clara ainda está lá. Os cinco sacos ainda estão lá.</p>
 
-        <p>Levou semanas até chegar às bordas da Rua 2. Não porque estava perdido, ele raramente estava perdido, mas porque parava. Observava lugares antes de atravessá-los. Aprendia o cheiro de cada rua, o ritmo de cada esquina, quem saía de casa em que horário e com que tipo de passo.</p>
+            <p>Mas há uma diferença entre antes e depois do lobo que Noah não consegue articular direito — uma
+                sensação de que ele não está apenas executando uma missão. Está, talvez pela primeira vez desde aquela
+                noite com as luzes vermelhas, fazendo parte de alguma coisa.</p>
 
-        <p>A cidade tinha uma linguagem. Ele estava aprendendo.</p>
+            <p><em>Ele não sabe se isso é redenção. Mas é o mais perto que chegou.</em></p>
 
-        <p>Foi numa dessas noites de observação, sentado no topo de uma marquise abandonada, que ele viu o BlackNoir pela primeira vez. Um homem andando por uma rua que ninguém andava depois da meia-noite, com um passo que não era de quem tem pressa e não era de quem estava perdido. Era o passo de alguém procurando alguma coisa.</p>
+            <scar class="scar"></scar>
 
-        <p>Vörðr desceu da marquise. Atravessou a rua. E ficou parado no meio do caminho.</p>
+        </article>
 
-        <p>O BlackNoir parou. Olhou para ele por um tempo. Não correu, não sacou nada, não falou. Apenas olhou.</p>
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h3>Ficha</h3>
 
-        <p>Então continuou andando.</p>
+            <div class="stat-row">
+                <span class="stat-label">Nome Civil</span>
+                <span class="stat-val">Noah Fontenelle</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Codinome</span>
+                <span class="stat-val">Blacknoir</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Status</span>
+                <span class="stat-val">Ativo</span>
+            </div>
 
-        <p>Vörðr foi junto.</p>
+            <h4>Progresso</h4>
+            <progress id="prog" value="0" max="100"></progress>
 
-        <p><strong>Não havia mais o que deliberar.</strong></p>
+            <h4>Parceiro</h4>
+            <p>Vörðr — lobo nórdico mutante. Guardião da Rua 2.</p>
 
-      </article>
+            <h4>Nota</h4>
+            <small>Passe o cursor nos termos sublinhados para descrições. Dê play para ouvir a história.</small>
 
-      <aside class="meta-card progress-wrap">
-        <h3>Sobre</h3>
-        <small>Lore oficial — Vörðr, guardião da Rua 2</small>
-
-        <div class="section">
-          <label for="progress">Progresso de leitura</label>
-          <progress id="progress" value="0" max="100"></progress>
-        </div>
-
-        <div class="section">
-          <h4>Classificação</h4>
-          <small>Espécime: <strong style="color:var(--gold)">N-7 / Vörðr</strong></small><br>
-          <small>Origem: <em style="color:var(--ice)">Mutação + DNA Fóssil</em></small><br>
-          <small>Status: <em style="color:var(--gold)">Guardião Ativo</em></small>
-        </div>
-
-        <div class="section">
-          <h4>Navegação</h4>
-          <div class="center">
-            <button class="btn" id="topBtn">↑ Topo</button>
-          </div>
-        </div>
-
-        <div class="section">
-          <h4>Dica</h4>
-          <small class="muted">Passe o cursor sobre termos sublinhados para ver descrições. Clique duas vezes no título para uma surpresa.</small>
-        </div>
-      </aside>
-    </main>
+            <div class="sidebar-btn-wrap" style="margin-top:1rem;">
+                <button class="btn" id="topBtn">↑ Topo</button>
+            </div>
+        </aside>
+    </div>
 
     <footer>
-      Salve como <code>index.html</code> com <code>style.css</code> e <code>script.js</code> na mesma pasta &nbsp;·&nbsp; GitHub Pages ready
+        Blacknoir &nbsp;·&nbsp; Rua 2 &nbsp;·&nbsp; Lore Oficial
     </footer>
 
-  </div>
 
-  <script src="script.js"></script>
 </body>
+<script src="script.js"></script>
+
 </html>
