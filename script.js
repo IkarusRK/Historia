@@ -345,12 +345,12 @@
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
       if (p.gold) {
         ctx.fillStyle = isDark
-          ? `rgba(200,168,75,${p.o})`
-          : `rgba(122,92,30,${p.o * .5})`;
+          ? `rgba(255, 215, 0, ${p.o * 0.75})`
+          : `rgba(160, 110, 20, ${p.o * .5})`;
       } else {
         ctx.fillStyle = isDark
-          ? `rgba(122,179,212,${p.o * .6})`
-          : `rgba(42,106,148,${p.o * .4})`;
+          ? `rgba(100, 220, 255, ${p.o * .7})`
+          : `rgba(30, 100, 160, ${p.o * .4})`;
       }
       ctx.fill();
     });
