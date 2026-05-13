@@ -138,15 +138,29 @@
     }
 
     .logo-skull {
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
       border: 1px solid var(--red-dim);
-      border-radius: 3px;
-      display: grid;
-      place-items: center;
-      font-size: 1.2rem;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: relative;
       overflow: hidden;
+      background: var(--surface);
+    }
+
+    .logo-skull img {
+      width: 80%;
+      height: 80%;
+      object-fit: contain;
+      filter: grayscale(100%) brightness(1.2);
+      transition: transform 0.3s ease;
+    }
+
+    .logo-skull:hover img {
+      transform: scale(1.1);
+      filter: grayscale(0%) saturate(1.5);
     }
 
     .logo-skull::after {
@@ -243,7 +257,7 @@
     }
 
     .line {
-      width: 100vw;
+      width: 100%;
       height: clamp(2rem, 5vw, 4rem);
       display: flex;
       align-items: center;
@@ -251,12 +265,17 @@
       white-space: nowrap;
       font-family: var(--ff-title);
       font-size: clamp(1.5rem, 4vw, 3rem);
-      letter-spacing: 0.2em;
+      /* Remove o scroll horizontal da página caso o texto passe */
+      letter-spacing: 0.4em;
+      position: relative;
     }
 
     .line span {
       display: inline-block;
-      animation: marquee 20s linear infinite;
+      padding-right: 2rem;
+      /* Espaço entre o fim de um bloco e o início do outro */
+      animation: marquee 40s linear infinite;
+      will-change: transform;
     }
 
     /* Configuração das 3 Linhas */
@@ -292,6 +311,8 @@
       100% {
         transform: translateX(-50%);
       }
+
+      /* Move apenas metade para criar o loop infinito */
     }
 
     /* Ajuste no Hero para o texto principal não sumir */
@@ -442,12 +463,18 @@
 
     .story p.para-hidden {
       opacity: 0;
-      transform: translateY(10px);
+      transform: translateY(30px) scale(0.98);
+      filter: blur(4px);
+      transition:
+        opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        filter 1s ease;
     }
 
     .story p.para-show {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0) scale(1);
+      filter: blur(0);
     }
 
     /* Drop cap */
@@ -614,21 +641,23 @@
     /* ── Tooltip ───────────────────────────────────── */
     #tooltip {
       position: fixed;
-      background: var(--surface);
+      background: rgba(16, 14, 11, 0.95);
+      backdrop-filter: blur(8px);
       border: 1px solid var(--border);
-      border-left: 2px solid var(--red-dim);
-      color: var(--white-dim);
+      border-left: 3px solid #c0392b;
+      color: #e8e4dc;
       font-family: var(--ff-body);
       font-style: italic;
       font-size: .82rem;
-      padding: .45rem .8rem;
+      padding: .6rem .9rem;
       border-radius: 2px;
       pointer-events: none;
       opacity: 0;
-      transition: opacity .25s;
+      transition: opacity .25s ease;
       z-index: 600;
       max-width: 210px;
       line-height: 1.5;
+      box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
     }
 
     /* ── Audio bar ─────────────────────────────────── */
@@ -730,7 +759,22 @@
     }
 
     .glossary-term {
-      border-bottom: 1px dotted var(--red-dim);
+      color: var(--gold);
+      /* Ou var(--red) para o BlackNoir */
+      border-bottom: 2px solid var(--gold-dim);
+      cursor: help;
+      position: relative;
+      transition: all 0.3s ease;
+      font-weight: 500;
+      padding: 0 2px;
+    }
+
+    .glossary-term:hover {
+      background: var(--gold-glow);
+      /* Um brilho suave atrás da palavra */
+      color: #fff;
+      border-bottom-color: var(--gold);
+      text-shadow: 0 0 8px var(--gold);
     }
 
     /* ── Scar line decoration ──────────────────────── */
